@@ -114,11 +114,11 @@ void EventLoop::wakeup() {
 
 // EventLoop的方法 => Poller的方法
 void EventLoop::updateChannel(Channel* channel) {
-    this->updateChannel(channel);
+    poller_->updateChannel(channel);
 }
 
 void EventLoop::removeChannel(Channel* channel) {
-    this->removeChannel(channel);
+    poller_->removeChannel(channel);
 }
 
 bool EventLoop::hasChannel(Channel* channel) {
